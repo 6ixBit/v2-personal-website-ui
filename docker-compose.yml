@@ -1,0 +1,16 @@
+version: '3'
+
+services: 
+    backend:
+        image: 6ixbit/v2-personal-website-server:latest
+        ports: 
+            - 8080:8080
+        restart: always
+
+    frontend:
+        build: .
+        ports: 
+            - 9000:8080
+        restart: always
+        depends_on: 
+          - backend
