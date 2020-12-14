@@ -6,6 +6,9 @@ services:
         ports: 
             - 8080:8080
         restart: always
+        environment:
+            - "GITHUB_URL=https://api.github.com/users/6ixbit/repos?direction=desc"
+            - "GITHUB_USERNAME=6ixBit"
 
     frontend:
         build: .
