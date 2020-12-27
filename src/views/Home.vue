@@ -1,18 +1,28 @@
 <template>
-    <h1>Welcome to my website...</h1>
-    <Grid/>
+    <div class="flex justify-center">
+
+        <ul id="menu">
+            <li>Home</li>
+            <li>Projects</li>
+        </ul>
+    </div>
 </template>
 
 <script>
-import Grid from "@/components/Grid.vue"
+// import Grid from "@/components/Grid.vue"
+// import axios from 'axios'
+
 export default {
     name: "Home",
-    components: {
-        Grid
+    setup() {
+
     }
 }
 </script>
 
-<style lang="sass">
-
+<style scoped>
+#menu {
+    list-style-type: lower-roman;
+    margin: 30px 0px;
+}
 </style>
