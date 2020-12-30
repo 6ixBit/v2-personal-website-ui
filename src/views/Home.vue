@@ -2,8 +2,8 @@
   <NavBar></NavBar>
 
   <div class="fixed my-4 flex flex-col items-center">
-    <img src="@/assets/images/github.svg"   alt="github"   class="svg-icon">
-    <img src="@/assets/images/linkedin.svg" alt="linkedin" class="svg-icon">
+    <img src="@/assets/images/github.svg"   alt="github"   class="svg-icon" @click="redirectToGit()">
+    <img src="@/assets/images/linkedin.svg" alt="linkedin" class="svg-icon" @click="redirectToLinkedin()">
   </div>
 
   <div class="flex justify-center">
@@ -23,7 +23,6 @@
 </template>
 
 <script>
-
 import ContactForm from "@/components/ContactForm.vue";
 import NavBar from "@/components/NavBar.vue"
 
@@ -31,6 +30,20 @@ export default {
   name: "Home",
   components: {
     ContactForm, NavBar
+  },
+  setup() {
+    function redirectToGit() {
+      window.location = process.env.VUE_APP_GITHUB_URL;
+    }
+
+    function redirectToLinkedin() {
+      window.location = process.env.VUE_APP_LINKEDIN_URL;
+    }
+
+    return {
+      redirectToGit,
+      redirectToLinkedin
+    }
   }
 };
 </script>
