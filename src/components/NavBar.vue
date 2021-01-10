@@ -14,7 +14,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
    .nav-items {
        @apply hover:bg-gray-700 font-medium rounded-md px-3;
    } 

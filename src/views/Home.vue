@@ -16,6 +16,10 @@
     </div>
   </div>
 
+  <div>
+    <ProjectCard/>
+  </div>
+
    <div class="flex justify-center">
         <ContactForm/>
    </div>
@@ -24,12 +28,13 @@
 
 <script>
 import ContactForm from "@/components/ContactForm.vue";
-import NavBar from "@/components/NavBar.vue"
+import NavBar from "@/components/NavBar.vue";
+import ProjectCard from "@/components/ProjectCard.vue";
 
 export default {
   name: "Home",
   components: {
-    ContactForm, NavBar
+    ContactForm, NavBar, ProjectCard
   },
   setup() {
     function redirectToGit() {
