@@ -13,16 +13,23 @@
 
 <script>
 import { ref } from 'vue'
+import axios from 'axios'
 
 export default {
     name: "ProjectCard",
     setup () {
         let fetchedProjects = ref()
 
+        try {
+            const req = axios.get("http://backend-api-service:8080/api/status")
+            console.log(req.data)
+        } catch (e) {
+            console.log("Request to backend failed...")
+        }
+        
         return {
             fetchedProjects
         }
-
         // TODO: Add section for programming language inside of card..
     }   
 }
